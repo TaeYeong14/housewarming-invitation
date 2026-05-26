@@ -1,0 +1,269 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard", sans-serif;
+  background: linear-gradient(180deg, #fff7f8 0%, #ffe6ea 100%);
+  color: #3f3436;
+  overflow-x: hidden;
+}
+
+.invitation {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 18px 60px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.small-text,
+.section-label {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #ff8fab;
+  font-weight: 700;
+}
+
+.home-icon {
+  font-size: 54px;
+  margin: 18px 0 10px;
+  animation: bounce 1.8s infinite;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(36px, 10vw, 54px);
+  line-height: 1.15;
+}
+
+.to {
+  margin-top: 24px;
+  font-size: clamp(20px, 5vw, 26px);
+  font-weight: 700;
+}
+
+.main-message {
+  margin-top: 8px;
+  font-size: clamp(24px, 7vw, 36px);
+  font-weight: 800;
+  color: #ff5c8a;
+}
+
+.scroll-text {
+  position: absolute;
+  bottom: 42px;
+  font-size: 14px;
+  color: #8f7479;
+  animation: float 1.6s infinite;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 2px solid #ffd1dc;
+  border-radius: 28px;
+  padding: 34px 24px;
+  margin: 32px 0;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(255, 143, 171, 0.18);
+}
+
+.card h2 {
+  margin: 10px 0 18px;
+  font-size: clamp(24px, 6vw, 32px);
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: clamp(16px, 4.2vw, 19px);
+  line-height: 1.7;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: left;
+  background: #fff7f8;
+  border-radius: 20px;
+  padding: 18px;
+  margin-top: 14px;
+}
+
+.info-item span {
+  font-size: 28px;
+}
+
+.info-item h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.notice p {
+  background: #fff7f8;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.button {
+  width: 100%;
+  display: block;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 18px;
+  margin-top: 14px;
+  background: #ff8fab;
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255, 92, 138, 0.25);
+}
+
+.link-button {
+  background: #3f3436;
+}
+
+.copy-message {
+  display: none;
+  color: #ff5c8a;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.ending {
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.ending h2 {
+  font-size: clamp(28px, 8vw, 40px);
+}
+
+.ending p {
+  font-size: clamp(20px, 5vw, 26px);
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.ending span {
+  margin-top: 20px;
+  color: #ff8fab;
+  font-weight: 700;
+}
+
+/* 스크롤 등장 효과 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 하트 비눗방울 */
+.heart {
+  position: fixed;
+  bottom: -30px;
+  z-index: 1;
+  pointer-events: none;
+  animation: rise linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* 작은 모바일 */
+@media (max-width: 360px) {
+  .invitation {
+    padding: 0 14px 50px;
+  }
+
+  .card {
+    padding: 28px 18px;
+    border-radius: 24px;
+  }
+
+  .info-item {
+    padding: 15px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+}
+
+/* 태블릿 이상 */
+@media (min-width: 768px) {
+  .invitation {
+    max-width: 520px;
+  }
+
+  .card {
+    padding: 42px 34px;
+  }
+}
