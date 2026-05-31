@@ -6,11 +6,10 @@
 
   <title>집들이 초대장</title>
 
-  <!-- 카톡 링크 미리보기 -->
   <meta property="og:title" content="우리집에 놀러와" />
-  <meta property="og:description" content="미정 & 혜선을 위한 집들이 초대장" />
-  <meta property="og:image" content="https://TaeYeong14.github.io/housewarming-invitation/images/thumbnail.jpg" />
-  <meta property="og:url" content="https://TaeYeong14.github.io/housewarming-invitation/" />
+  <meta property="og:description" content="미정이와 혜서니를 위한 집들이 초대장" />
+  <meta property="og:image" content="https://taeyeong14.github.io/housewarming-invitation/images/thumbnail.jpg" />
+  <meta property="og:url" content="https://taeyeong14.github.io/housewarming-invitation/" />
   <meta property="og:type" content="website" />
 
   <link rel="stylesheet" href="./style.css" />
@@ -23,9 +22,16 @@
       <p class="small-text">HOUSEWARMING</p>
       <div class="home-icon">🏠</div>
       <h1>집들이 초대장</h1>
-      <p class="to">To. 미정 & 혜선</p>
       <p class="main-message">우리집에 놀러와</p>
       <p class="scroll-text">아래로 스크롤 ↓</p>
+    </section>
+
+    <section class="drawing-section fade-up">
+      <img
+        src="./images/invitation-card.png"
+        alt="혜서니와 미정이를 위한 손그림 집들이 초대장"
+        class="drawing-card"
+      />
     </section>
 
     <section class="card fade-up">
@@ -62,43 +68,33 @@
         <div>
           <h3>준비물</h3>
           <p>여행 가는 듯한 마음과 체력</p>
-        </div>
-      </div>
-
-      <div class="info-item">
-        <span>🍚</span>
-        <div>
-          <h3>필수 조건</h3>
-          <p>많이 먹을 수 있는 튼튼한 위장</p>
+          <p>
+            많이 먹을 수 있는 튼튼한 위장
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="card notice fade-up">
-      <p class="section-label">NOTICE</p>
-      <h2>⚠️ 주의사항</h2>
-      <p>배 터질 수 있음</p>
-      <p>과식 가능성 있음</p>
-      <p>집주인 신남</p>
-    </section>
-
-    <section class="card fade-up">
+    <section class="card location-card fade-up">
       <p class="section-label">LOCATION</p>
-      <h2>멀지만 와주면 왕감동 🥹</h2>
+      <h3>멀지만 와주면 왕감동 🥹</h3>
+      <p class="location-subtitle">경기도 양주시 회천로 377 양주회천10단지아파트 1002동 1206호</p>
 
-      <button class="button" onclick="copyAddress()">📋 주소 복사하기</button>
-      <a class="button link-button" href="#" target="_blank">🗺 지도 열기</a>
+      <img src="./images/map.png" alt="집들이 장소 지도" class="map-image" />
 
+      <div class="button-group">
+        <button class="button" onclick="copyAddress()">📋 주소 복사</button>
+    
+        <a class="button link-button" href="https://naver.me/xmxDftTO" target="_blank" rel="noopener noreferrer">
+          🗺 네이버 지도
+        </a>
+      </div>
+    
       <p id="copyMessage" class="copy-message">주소가 복사됐어요!</p>
-    </section>
-
-    <section class="ending fade-up">
-      <h2>와줘서 고마워 🤍</h2>
-      <p>
-        맛있는 거 잔뜩<br />
-        준비해둘게!
+      
+      <p class="pickup-text">
+        🚗 덕계역으로 오면 멋쟁이 쿼카 공주님이 데리러 갈 예정
       </p>
-      <span>Made with 🩷</span>
     </section>
   </main>
 

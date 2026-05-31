@@ -1,4 +1,3 @@
-// 스크롤 등장 애니메이션
 const fadeItems = document.querySelectorAll(".fade-up");
 
 const observer = new IntersectionObserver(
@@ -16,7 +15,6 @@ const observer = new IntersectionObserver(
 
 fadeItems.forEach((item) => observer.observe(item));
 
-// 하트 비눗방울 애니메이션
 const heartContainer = document.querySelector(".heart-container");
 const hearts = ["🩷", "💗", "🤍", "💕"];
 
@@ -38,9 +36,8 @@ function createHeart() {
 
 setInterval(createHeart, 450);
 
-// 주소 복사
 function copyAddress() {
-  const address = "여기에 실제 주소를 입력하세요";
+  const address = "경기도 양주시 회천로 377 양주회천10단지아파트 1002동 1206호";
 
   navigator.clipboard.writeText(address).then(() => {
     const message = document.getElementById("copyMessage");
