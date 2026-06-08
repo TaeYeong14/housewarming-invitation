@@ -295,3 +295,162 @@ body {
     width: 400px;
   }
 }
+
+.pickup-scene {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  margin-top: 18px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.scene-img {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.train {
+  width: 44%;
+  left: -48%;
+  bottom: 16px;
+  animation: trainTimeline 12s infinite ease-in-out;
+}
+
+.house-empty,
+.house-friends {
+  width: 30%;
+  right: 4%;
+  bottom: 16px;
+}
+
+.house-empty {
+  animation: houseEmptyTimeline 12s infinite ease-in-out;
+}
+
+.house-friends {
+  opacity: 0;
+  animation: houseFriendsTimeline 12s infinite ease-in-out;
+}
+
+.car {
+  width: 34%;
+  bottom: 14px;
+}
+
+.car-ttqk {
+  left: 62%;
+  animation: carTtqkTimeline 12s infinite ease-in-out;
+}
+
+.car-friends {
+  opacity: 0;
+  left: 36%;
+  animation: carFriendsTimeline 12s infinite ease-in-out;
+}
+
+.car-quokka {
+  opacity: 0;
+  left: 60%;
+  animation: carQuokkaTimeline 12s infinite ease-in-out;
+}
+
+@keyframes trainTimeline {
+  0% {
+    left: -32%;
+    opacity: 1;
+  }
+  18% {
+    left: 0%;
+    opacity: 1;
+  }
+  33% {
+    left: 0%;
+    opacity: 0;
+  }
+  100% {
+    left: -32%;
+    opacity: 0;
+  }
+}
+
+@keyframes carTtqkTimeline {
+  0% {
+    left: 60%;
+    opacity: 1;
+  }
+  18% {
+    left: 38%;
+    opacity: 1;
+  }
+  30% {
+    left: 38%;
+    opacity: 0;
+  }
+  100% {
+    left: 60%;
+    opacity: 0;
+  }
+}
+
+@keyframes carFriendsTimeline {
+  0%, 28% {
+    left: 38%;
+    opacity: 0;
+  }
+  34% {
+    left: 38%;
+    opacity: 1;
+  }
+  58% {
+    left: 56%;
+    opacity: 1;
+  }
+  66% {
+    left: 56%;
+    opacity: 0;
+  }
+  100% {
+    left: 38%;
+    opacity: 0;
+  }
+}
+
+@keyframes houseEmptyTimeline {
+  0%, 58% {
+    opacity: 1;
+  }
+  66%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes houseFriendsTimeline {
+  0%, 58% {
+    opacity: 0;
+  }
+  66%, 100% {
+    opacity: 1;
+  }
+}
+
+@keyframes carQuokkaTimeline {
+  0%, 60% {
+    left: 58%;
+    opacity: 0;
+  }
+  68% {
+    left: 58%;
+    opacity: 1;
+  }
+  88% {
+    left: 92%;
+    opacity: 1;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
