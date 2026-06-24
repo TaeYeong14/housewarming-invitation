@@ -187,10 +187,10 @@ body {
 
 .card .pickup-text {
   margin-top: 18px !important;
-  padding-top: 16px;
+  padding-top: 28px;
   border-top: 1px dashed #ffd1dc;
 
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.6;
   font-weight: 500;
   color: #6f5c60;
@@ -313,17 +313,22 @@ body {
 }
 
 .train {
-  width: 44%;
+  width: 32%;
   left: -48%;
   bottom: 16px;
   animation: trainTimeline 12s infinite ease-in-out;
 }
 
-.house-empty,
-.house-friends {
-  width: 30%;
-  right: 4%;
+.house-empty {
+  width: 40%;
+  right: -2%;
   bottom: 16px;
+}
+
+.house-friends {
+  width: 42%;
+  right: -3%;
+  bottom: 18px;
 }
 
 .house-empty {
@@ -336,8 +341,8 @@ body {
 }
 
 .car {
-  width: 34%;
-  bottom: 14px;
+  width: 30%;
+  bottom: 16px;
 }
 
 .car-ttqk {
@@ -382,11 +387,11 @@ body {
     opacity: 1;
   }
   18% {
-    left: 38%;
+    left: 30%;
     opacity: 1;
   }
   30% {
-    left: 38%;
+    left: 30%;
     opacity: 0;
   }
   100% {
@@ -397,23 +402,23 @@ body {
 
 @keyframes carFriendsTimeline {
   0%, 28% {
-    left: 38%;
+    left: 30%;
     opacity: 0;
   }
   34% {
-    left: 38%;
+    left: 30%;
     opacity: 1;
   }
   58% {
-    left: 56%;
+    left: 70%;
     opacity: 1;
   }
   66% {
-    left: 56%;
+    left: 70%;
     opacity: 0;
   }
   100% {
-    left: 38%;
+    left: 30%;
     opacity: 0;
   }
 }
@@ -437,12 +442,12 @@ body {
 }
 
 @keyframes carQuokkaTimeline {
-  0%, 60% {
-    left: 58%;
+  0%, 58% {
+    left: 70%;
     opacity: 0;
   }
   68% {
-    left: 58%;
+    left: 70%;
     opacity: 1;
   }
   88% {
