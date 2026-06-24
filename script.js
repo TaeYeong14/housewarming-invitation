@@ -37,14 +37,15 @@ function createHeart() {
 setInterval(createHeart, 450);
 
 function copyAddress() {
-  const address = "경기도 양주시 회천로 377 양주회천10단지아파트 1002동 1206호";
+  const address = "경기도 양주시 회천로 377";
 
   navigator.clipboard.writeText(address).then(() => {
     const message = document.getElementById("copyMessage");
-    message.style.display = "block";
+
+    message.classList.add("show");
 
     setTimeout(() => {
-      message.style.display = "none";
+      message.classList.remove("show");
     }, 1800);
   });
 }

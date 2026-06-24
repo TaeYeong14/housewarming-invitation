@@ -178,11 +178,31 @@ body {
   background: #3f3436;
 }
 
-.copy-message {
-  display: none;
-  color: #ff5c8a;
-  font-weight: 800;
-  margin-top: 12px;
+.copy-toast {
+  position: fixed;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px);
+
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+
+  background: #3f3436;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .card .pickup-text {
